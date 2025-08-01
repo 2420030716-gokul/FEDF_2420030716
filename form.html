@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Hover Form</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      overflow: hidden;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      perspective: 1000px;
+    }
+
+    .form-box:hover {
+      transform: rotateX(5deg) rotateY(5deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+      font-size: 26px;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus {
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+      outline: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #f97316;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 0 #c2410c;
+    }
+
+    .submit-btn:hover {
+      background: #ea580c;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .submit-btn:active {
+      transform: translateY(2px);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Create Account</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="Enter your full name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" required placeholder="e.g. +1 123 456 7890">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="Choose a strong password">
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+</body>
+</html>
